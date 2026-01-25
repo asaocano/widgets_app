@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_app/menu/menu_items.dart';
 import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
+import 'package:widgets_app/presentation/screens/cards/cards_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
+  static const name = "home_screen";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +48,13 @@ class _CustomListTile extends StatelessWidget {
         // Navigator.of(context).push(
         //   MaterialPageRoute(builder: (context) => const ButtonsScreen())
         // );
-        Navigator.pushNamed(context, menuItem.link);
+        // Navigator.pushNamed(context, menuItem.link);
+
+        //Navegación mediante urls
+        context.push(menuItem.link,); //Se pone la locación "encima" para poder regresar después
+
+        //Navegacion por nombre
+        // context.pushNamed(CardsScreen.name);
       },
     );
   }

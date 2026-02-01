@@ -32,10 +32,17 @@ const appMenuItems = <MenuItem>[
     subtitle: 'Generales y controlados',
     link: '/progress',
     icon: Icons.refresh_rounded,
-  ),MenuItem(
+  ),
+  MenuItem(
     title: 'Snackbars y dialogs',
     subtitle: 'Indicadores en pantalla',
     link: '/snackbars',
     icon: Icons.info_outline_rounded,
+  ),
+  MenuItem(
+    title: 'Animated container',
+    subtitle: 'Statefu widget animado',
+    link: '/animated',
+    icon: Icons.check_box_outline_blank_rounded,
   ),
 ];
